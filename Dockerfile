@@ -1,7 +1,11 @@
-FROM node:carbon
-WORKDIR /usr/src/app
-COPY package*.json ./
+FROM base_image
+# Copy application code to the container
+COPY . /app
+# Set working directory
+WORKDIR /app
+# Install dependencies
 RUN npm install
-COPY . .
-EXPOSE 8080
-CMD [ "npm", "start" ]
+# Expose port
+EXPOSE 3000
+# Command to run the application
+CMD ["node", "app.js"]
