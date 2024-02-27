@@ -1,4 +1,4 @@
-FROM base_image
+FROM node:carbon
 # Copy application code to the container
 COPY . /app
 # Set working directory
