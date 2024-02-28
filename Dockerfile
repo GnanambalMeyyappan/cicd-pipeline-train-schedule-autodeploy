@@ -1,8 +1,7 @@
-FROM debian:12-slim
+FROM node:carbon
 # Copy application code to the container
-COPY . /app
-# Set working directory
-WORKDIR /app
+WORKDIR /usr/src/app
+COPY package*.json ./
 # Install dependencies
 RUN npm install
 # Expose port
