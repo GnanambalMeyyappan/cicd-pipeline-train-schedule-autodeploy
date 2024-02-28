@@ -1,4 +1,4 @@
-FROM node:latest
+FROM debian:12-slim
 # Copy application code to the container
 COPY . /app
 # Set working directory
